@@ -1,0 +1,18 @@
+{
+  "name": "coolibri",
+  "version": "0.0.1",
+  "description": "Brings your tweets to life",
+  "author": "Gustavo <gustavo@irbislab.com>",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "debug": "*"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 0.10.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
