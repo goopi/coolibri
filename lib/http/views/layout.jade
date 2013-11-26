@@ -1,0 +1,27 @@
+!!!5
+html
+  head
+    meta(charset='utf-8')
+    title Coolibri
+    link(href='/stylesheets/main.css', rel='stylesheet')
+  body
+    .nav
+      .links
+        unless logged
+          a(href='/service/authorize/twitter') Login with Twitter
+        else
+          a(href='/logout') Logout
+        span.hide  | 
+          a.stop(href='#') Stop
+      .logo
+        a(href='/')
+          img(src='/images/coolibri.png')
+    .container
+      block content
+    if logged
+      script(type='text/javascript').
+        var token = '#{token}';
+      script(src='/socket.io/socket.io.js')
+      script(src='/javascripts/helpers.js')
+      script(src='/javascripts/drawer.js')
+      script(src='/javascripts/app.js')

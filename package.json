@@ -6,7 +6,16 @@
   "private": true,
   "dependencies": {
     "express": "3.x",
-    "debug": "*"
+    "debug": "*",
+    "redis": "0.8.x",
+    "hiredis": "0.1.x",
+    "socket.io": "0.9.x",
+    "tuiter": "0.2.x",
+    "signing": "0.0.1",
+    "oauth": "0.9.x",
+    "jade": "0.27.x",
+    "stylus": "0.31.x",
+    "nib": "0.2.x"
   },
   "devDependencies": {},
   "engines": {

@@ -1,0 +1,18 @@
+{
+  "protocol": "http",
+  "host": "local.host",
+  "port": 3000,
+  "db": {
+    "name": "coolibri",
+    "host": "localhost"
+  },
+  "salt": "salt",
+  "secret": "your-secret",
+  "services": {
+    "twitter": {
+      "consumer_key": "",
+      "consumer_secret": "",
+      "callback": "http://coolibri:3000/service/callback/twitter"
+    }
+  }
+}
