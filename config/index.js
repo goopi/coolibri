@@ -67,9 +67,20 @@ function configure(app) {
  */
 
 redis.createClient = function(){
-  var cli = require('redis').createClient();
+  var cli;
+
+  if (process.env.REDISTOGO_URL) {
+    var rtg = require('url').parse(process.env.REDISTOGO_URL);
+    cli = require('redis').createClient(rtg.port, rtg.hostname);
+
+    cli.auth(rtg.auth.split(':')[1]);
+  } else {
+    cli = require('redis').createClient();
+  }
+
   cli.on('error', function(err){
     debug('Redis error: ' + err);
   });
+
   return cli;
 };
