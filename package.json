@@ -15,7 +15,8 @@
     "oauth": "0.9.x",
     "jade": "0.27.x",
     "stylus": "0.31.x",
-    "nib": "0.2.x"
+    "nib": "0.2.x",
+    "type-component": "*"
   },
   "devDependencies": {},
   "engines": {

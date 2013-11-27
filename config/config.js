@@ -3,6 +3,8 @@
  */
 
 var debug = require('debug')('cooli:config');
+var utils = require('../lib/utils');
+var env = require('./env');
 
 /**
  * Load config options.
@@ -17,9 +19,10 @@ try {
   config = require(filepath);
 } catch (e) {
   debug('Found error: %s', e.message);
-  process.exit(1);
+  debug('Loading config settings from environment vars only');
 }
 
+config = utils.merge(config, env);
 debug('Loaded config object %j', config);
 
 /**
